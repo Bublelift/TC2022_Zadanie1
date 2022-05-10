@@ -12,7 +12,7 @@ A file with empty body, that uses javascript as source of content. I use 2 API s
 
 *My private API token is left in the code as I will not need it anymore*
 
-#How to build it
+# How to build it
 First move all the files in one directory, then open terminal in this location and use following commands:
 ```
 docker build -t <image tag> .
