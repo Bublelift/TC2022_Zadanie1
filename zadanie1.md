@@ -1,5 +1,5 @@
-#Zadanie 1
-##a)
+# Zadanie 1
+## a)
 ```js
 const express = require('express')
 const http = require('http')
@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 
 app.listen(8080)
 ```
-##b)
+## b)
 ```html
 <html>
 
@@ -63,7 +63,7 @@ app.listen(8080)
 ```
 Strona przesyła żądanie do API zwracającego adres IP osoby odwiedzającej stronę. Zwracane są także dane o jego geolokalizacji, które wykorzystuję, żeby przesłać żądanie do innego API, które na podstawie szerokości i długości geograficznej zwraca informacje o czasie lokalnym użytkownika.
 
-#Zadanie 2
+# Zadanie 2
 ```dockerfile
 #na początku użyłem node:latest, ale ważył 1gb
 FROM node:alpine
@@ -86,20 +86,20 @@ RUN npm init -y &&\
 CMD ["node", "index"]	
 ```
 
-#Zadanie 3
-##a) Zbudowanie kontenera
+# Zadanie 3
+## a) Zbudowanie kontenera
 ```
 docker build -t serwer1 .
 ```
-##b) Uruchomienie kontenera
+## b) Uruchomienie kontenera
 ```
 dodocker run -d --name serwer1 -p 8080:8080 serwer1cker run -d --name serwer1 -p 8080:8080 serwer1
 ```
-##c) Dostęp do logów
+## c) Dostęp do logów
 ```
 docker exec -it serwer1 sh -c "cat logs.txt"
 ```
-##d) Sprawdzenie ilości warstw
+## d) Sprawdzenie ilości warstw
 ```
 docker history serwer1
 ```
@@ -108,7 +108,7 @@ lub
 docker image inspect serwer1
 ```
 
-#Zadanie 4
+# Zadanie 4
 Dostęp do architektur za pomocą qemu:
 ```
 sudo apt-get install -y qemu-user-static
