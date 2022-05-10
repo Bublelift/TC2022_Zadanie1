@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <script>
+    var lat;
+    var lng;
+    fetch('http://api.ipstack.com/check?access_key=eab860cdc9405f69663ecf1c4e055157')
+      .then(res => res.json())
+      .then((out) => {
+        lat = out.latitude;
+        lng = out.longitude
+        document.write('IP: ' + out.ip + '<br>');
+        fetch(`http://api.geonames.org/timezoneJSON?lat=${lat}&lng=${lng}&username=hhhhh`)
+          .then(res => res.json())
+          .then((wynik) => {
+            document.write(`Czas w ${wynik.countryName}: ${wynik.time}<br>`);
+            document.write(`Słońce wstaje o ${wynik.sunrise} i zachodzi o ${wynik.sunset}`);
+          }).catch(err => console.error(err));
+      }).catch(err => console.error(err));
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
